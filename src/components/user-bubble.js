@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, memo } from 'react'
 import { Animated, StyleSheet, Text } from 'react-native'
 
 function UserBubble ({ data }) {
@@ -35,7 +35,7 @@ function UserBubble ({ data }) {
     )
 }
 
-export default UserBubble
+export default memo(UserBubble)
 
 const styles = StyleSheet.create({
     bubble: {

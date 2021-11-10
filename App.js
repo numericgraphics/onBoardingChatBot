@@ -1,10 +1,8 @@
+import React from 'react'
+import ChatBot from './src/screens/chat-bot'
 
-import React from 'react';
-import ChatBot from "./src/screens/chat-bot"
-
-export default function App() {
-  return (
-    <ChatBot />
-  )
+export default function App () {
+    return (
+        <ChatBot />
+    )
 }
-

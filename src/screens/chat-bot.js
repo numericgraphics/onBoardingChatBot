@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect, useState, useRef, Fragment } from 'react'
+import React, { useEffect, useState, useRef, Fragment } from 'react'
 import { SafeAreaView, StyleSheet, ScrollView } from 'react-native'
 import BubblesFactory from '../components/bubbles-factory'
 import UserBubble from '../components/user-bubble'
@@ -40,7 +40,6 @@ const ChatBot = () => {
                 }}
             >
                 {components.map((component, index) => {
-                    console.log('test me', component)
                     return (
                         <Fragment key={index}>
                             { component }
@@ -63,5 +62,3 @@ const styles = StyleSheet.create({
         paddingBottom: 120
     }
 })
-
-/* <BubblesFactory data={data}/> */

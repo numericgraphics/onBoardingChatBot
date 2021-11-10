@@ -1,0 +1,21 @@
+{
+  "chatBot": {
+    "states": {
+      "firstStep": {
+        "chatBotMessage": [
+          {
+            "text": "test 1"
+          },
+          {
+            "text": "test 2"
+          },
+          {
+            "text": "test 3"
+          }
+        ]
+      },
+      "secondStep": {},
+      "thirdStep": {}
+    }
+  }
+}
