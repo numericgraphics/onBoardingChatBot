@@ -6,7 +6,7 @@ const BubblesFactory = ({
 }) => {
     const [bubbles, setBubbles] = useState([])
     const [index, setIndex] = useState(null)
-    const componentsLength = useMemo(() => { return data?.content.length }, [data])
+    const componentsLength = useMemo(() => { return data?.length }, [data])
 
     useEffect(() => {
         let count = 0
@@ -25,13 +25,13 @@ const BubblesFactory = ({
         if (index !== null) {
             setBubbles([
                 ...bubbles,
-                data?.content[index]
+                data[index]
             ])
         }
     }, [index])
 
     const stopBubbles = () => {
-        console.log('stopBubbles', data?.nextAction)
+        console.log('stopBubbles')
     }
 
     return (

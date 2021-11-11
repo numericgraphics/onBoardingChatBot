@@ -1,8 +1,7 @@
 {
   "chatBot": {
-    "states": {
       "firstStep": {
-        "chatBotMessage": [
+        "messages": [
           {
             "text": "test 1"
           },
@@ -16,6 +15,5 @@
       },
       "secondStep": {},
       "thirdStep": {}
-    }
   }
 }

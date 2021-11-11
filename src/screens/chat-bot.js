@@ -2,32 +2,20 @@ import React, { useEffect, useState, useRef, Fragment } from 'react'
 import { SafeAreaView, StyleSheet, ScrollView } from 'react-native'
 import BubblesFactory from '../components/bubbles-factory'
 import UserBubble from '../components/user-bubble'
-
-const data = {
-    content: [
-        {
-            text: 'test 1'
-        },
-        {
-            text: 'test 2'
-        },
-        {
-            text: 'test 3'
-        }
-    ],
-    nextAction: 'next action'
-}
+import data from '~/assets/json/chat-bot.json'
 
 const ChatBot = () => {
     const [components, setComponents] = useState([])
     const SwimLaneRef = useRef(null)
 
     useEffect(() => {
-        setComponents([
-            ...components,
-            // eslint-disable-next-line react/jsx-key
-            <BubblesFactory data={data} bubble={<UserBubble/>}/>
-        ])
+        if (data) {
+            setComponents([
+                ...components,
+                // eslint-disable-next-line react/jsx-key
+                <BubblesFactory data={data?.chatBot.firstStep.messages} bubble={<UserBubble/>}/>
+            ])
+        }
     }, [])
 
     return (
