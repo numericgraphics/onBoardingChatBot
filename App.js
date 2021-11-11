@@ -1,8 +1,13 @@
 import React from 'react'
-import ChatBot from './src/screens/chat-bot'
+import { StatusBar } from 'expo-status-bar'
+import ChatBot from '~/screens/chat-bot'
+import { GlobalProvider } from '~/providers/global-provider'
 
 export default function App () {
     return (
-        <ChatBot />
+        <GlobalProvider>
+            <ChatBot />
+            <StatusBar style="auto" />
+        </GlobalProvider>
     )
 }

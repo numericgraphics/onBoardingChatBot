@@ -5,7 +5,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "clearAll": "watchman watch-del-all && rm -rf node_modules && rm yarn.lock && yarn cache clean && yarn install && rm -rf /tmp/metro-* && rm -fr $TMPDIR/metro-cache"
   },
   "dependencies": {
     "expo": "~43.0.0",
@@ -13,6 +13,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.2",
+    "react-native-safe-area-context": "3.3.2",
     "react-native-web": "0.17.1"
   },
   "devDependencies": {

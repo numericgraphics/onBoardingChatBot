@@ -6,7 +6,10 @@ module.exports = function (api) {
             'module-resolver',
             {
                 alias: {
-                    '~/assets': './assets'
+                    '~/assets': './assets',
+                    '~/components': './src/components',
+                    '~/screens': './src/screens',
+                    '~/providers': './src/providers'
                 }
             }
         ]

@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useRef, Fragment } from 'react'
-import { SafeAreaView, StyleSheet, ScrollView } from 'react-native'
-import BubblesFactory from '../components/bubbles-factory'
-import UserBubble from '../components/user-bubble'
+import { StyleSheet, ScrollView } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+
+import BubblesFactory from '~/components/bubbles-factory'
+import UserBubble from '~/components/user-bubble'
 import data from '~/assets/json/chat-bot.json'
 
 const ChatBot = () => {

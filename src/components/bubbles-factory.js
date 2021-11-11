@@ -2,7 +2,8 @@ import React, { useMemo, useEffect, useState, cloneElement, memo, Fragment } fro
 
 const BubblesFactory = ({
     data,
-    bubble
+    bubble,
+    interval = 1000
 }) => {
     const [bubbles, setBubbles] = useState([])
     const [index, setIndex] = useState(null)
@@ -10,15 +11,15 @@ const BubblesFactory = ({
 
     useEffect(() => {
         let count = 0
-        const interval = setInterval(() => {
+        const timer = setInterval(() => {
             if (count === componentsLength) {
                 stopBubbles()
-                clearInterval(interval)
+                clearInterval(timer)
             } else {
                 setIndex(count)
                 count++
             }
-        }, 1000)
+        }, interval)
     }, [])
 
     useEffect(() => {
