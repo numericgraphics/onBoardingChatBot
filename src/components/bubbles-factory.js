@@ -32,7 +32,8 @@ const BubblesFactory = ({
     }, [index])
 
     const stopBubbles = () => {
-        console.log('stopBubbles')
+        console.log('stopBubbles - end of sequence')
+        // Code here to dispatch next action
     }
 
     return (

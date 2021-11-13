@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, memo } from 'react'
 import { Animated, StyleSheet, Text } from 'react-native'
 
-function UserBubble ({ data }) {
+const UserBubble = ({ data }) => {
     const positionAnimated = useRef(new Animated.Value(10)).current
     const opacityAnimated = useRef(new Animated.Value(0)).current
 

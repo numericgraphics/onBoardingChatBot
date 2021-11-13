@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, Fragment } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import { StyleSheet, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
@@ -8,27 +8,19 @@ import data from '~/assets/json/chat-bot.json'
 
 const ChatBot = () => {
     const [components, setComponents] = useState([])
-    const SwimLaneRef = useRef(null)
 
     useEffect(() => {
         if (data) {
             setComponents([
-                ...components,
                 // eslint-disable-next-line react/jsx-key
-                <BubblesFactory data={data?.chatBot.firstStep.messages} bubble={<UserBubble/>}/>
+                <BubblesFactory data={data?.chatBot.messages} bubble={<UserBubble/>}/>
             ])
         }
     }, [])
 
     return (
         <SafeAreaView style={styles.container}>
-            <ScrollView
-                ref={SwimLaneRef}
-                contentContainerStyle={styles.scrollViewContainer} // instead of contentInset={{ bottom: 100 }} for ios only
-                onContentSizeChange={() => {
-                    SwimLaneRef.current.scrollToEnd({ animated: true, duration: 600 })
-                }}
-            >
+            <ScrollView>
                 {components.map((component, index) => {
                     return (
                         <Fragment key={index}>
