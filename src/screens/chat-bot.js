@@ -3,7 +3,7 @@ import { StyleSheet, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import BubblesFactory from '~/components/bubbles-factory'
-import UserBubble from '~/components/user-bubble'
+import ChatBubble from '~/components/chat-bubble'
 import data from '~/assets/json/chat-bot.json'
 
 const ChatBot = () => {
@@ -13,7 +13,7 @@ const ChatBot = () => {
         if (data) {
             setComponents([
                 // eslint-disable-next-line react/jsx-key
-                <BubblesFactory data={data?.chatBot.messages} bubble={<UserBubble/>}/>
+                <BubblesFactory data={data?.chatBot.messages} bubble={<ChatBubble/>} interval={3000}/>
             ])
         }
     }, [])

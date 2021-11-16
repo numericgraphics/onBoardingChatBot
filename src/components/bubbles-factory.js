@@ -11,6 +11,10 @@ const BubblesFactory = ({
 
     useEffect(() => {
         let count = 0
+
+        setIndex(count)
+        count++
+
         const timer = setInterval(() => {
             if (count === componentsLength) {
                 stopBubbles()
