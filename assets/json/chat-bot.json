@@ -1,14 +1,36 @@
 {
   "chatBot": {
-    "messages": [
+    "partOne": [
       {
-        "text": "test 1"
+        "text": "partOne 1"
       },
       {
-        "text": "test 2"
+        "text": "partOne 2"
+      }
+    ],
+    "partTwo": [
+      {
+        "text": "partTwo 1"
       },
       {
-        "text": "test 3"
+        "text": "partTwo 2"
+      },
+      {
+        "text": "partTwo 3"
+      }
+    ],
+    "partThree": [
+      {
+        "text": "partThree 1"
+      },
+      {
+        "text": "partThree 2"
+      },
+      {
+        "text": "partThree 3"
+      },
+      {
+        "text": "partThree 4"
       }
     ]
   }
