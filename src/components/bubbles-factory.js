@@ -3,7 +3,8 @@ import React, { useMemo, useEffect, useState, cloneElement, memo, Fragment } fro
 const BubblesFactory = ({
     data,
     bubble,
-    interval = 1000
+    interval = 1000,
+    callback
 }) => {
     const [bubbles, setBubbles] = useState([])
     const [index, setIndex] = useState(null)
@@ -38,6 +39,7 @@ const BubblesFactory = ({
     const stopBubbles = () => {
         console.log('stopBubbles - end of sequence')
         // Code here to dispatch next action
+        callback && callback()
     }
 
     return (

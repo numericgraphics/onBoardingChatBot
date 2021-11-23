@@ -9,7 +9,10 @@ module.exports = function (api) {
                     '~/assets': './assets',
                     '~/components': './src/components',
                     '~/screens': './src/screens',
-                    '~/providers': './src/providers'
+                    '~/providers': './src/providers',
+                    '~/reducers': './src/reducers',
+                    '~/tools': './src/tools',
+                    '~/factories': './src/factories'
                 }
             }
         ]

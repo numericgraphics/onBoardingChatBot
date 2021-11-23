@@ -1,22 +1,30 @@
 import React, { useEffect, useState, Fragment, useContext } from 'react'
 import { StyleSheet, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-
 import BubblesFactory from '~/components/bubbles-factory'
-import ChatBubble from '~/components/chat-bubble'
 import data from '~/assets/json/chat-bot.json'
 import ChatBotContext from '~/providers/chatbot-provider'
+import { ComponentsFactory } from '~/factories/components-factory'
+import { RenderItems } from '~/tools/constants'
 
 const ChatBot = ({ props }) => {
     const [components, setComponents] = useState([])
     const { reducer } = useContext(ChatBotContext)
-    const { state } = reducer
+    const { state, dispatch } = reducer
 
     useEffect(() => {
         if (data) {
             setComponents([
+                ...components,
                 // eslint-disable-next-line react/jsx-key
-                <BubblesFactory data={data.chatBot[state.currentAction]} bubble={<ChatBubble/>} interval={3000}/>
+                <BubblesFactory
+                    data={data.chatBot[state.currentAction]}
+                    bubble={ComponentsFactory(state.renderItem)}
+                    interval={state.renderItem === RenderItems.CHAT_BUBBLE ? 3000 : 1000}
+                    callback={() => {
+                        state.nextAction && dispatch({ type: state.nextAction })
+                    }}
+                />
             ])
         }
     }, [state])
@@ -47,5 +55,3 @@ const styles = StyleSheet.create({
         paddingBottom: 120
     }
 })
-
-/* <BubblesFactory data={data?.chatBot.messages} bubble={<ChatBubble/>} interval={3000}/> */
