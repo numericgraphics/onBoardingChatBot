@@ -1,5 +1,6 @@
 import React, { useEffect, createContext, useReducer } from 'react'
-import { ChatBotReducer, InitialChatBotState, ChatBotStates } from '~/reducers/chatbot-reducer'
+import { ChatBotReducer, InitialChatBotState } from '~/reducers/chatbot-reducer'
+import ChatBotStates from '~/tools/constants'
 
 const ChatBotContext = createContext(undefined)
 

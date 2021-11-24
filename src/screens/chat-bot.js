@@ -7,7 +7,7 @@ import ChatBotContext from '~/providers/chatbot-provider'
 import { ComponentsFactory } from '~/factories/components-factory'
 import { RenderItems } from '~/tools/constants'
 
-const ChatBot = ({ props }) => {
+const ChatBot = (props) => {
     const [components, setComponents] = useState([])
     const { reducer } = useContext(ChatBotContext)
     const { state, dispatch } = reducer
@@ -20,7 +20,7 @@ const ChatBot = ({ props }) => {
                 <BubblesFactory
                     data={data.chatBot[state.currentAction]}
                     bubble={ComponentsFactory(state.renderItem)}
-                    interval={state.renderItem === RenderItems.CHAT_BUBBLE ? 3000 : 1000}
+                    interval={state.renderItem === RenderItems.CHAT_BUBBLE ? 3000 : 1500}
                     callback={() => {
                         state.nextAction && dispatch({ type: state.nextAction })
                     }}

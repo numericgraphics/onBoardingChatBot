@@ -5,8 +5,8 @@ export const RenderItems = Object.freeze({
 })
 
 export const ChatBotStates = Object.freeze({
-    PART_ONE: 'partOne',
-    PART_TWO: 'partTwo',
-    PART_THREE: 'partThree',
+    STATE_ONE: 'stateOne',
+    STATE_TWO: 'stateTwo',
+    STATE_THREE: 'stateThree',
     FINISHED: 'finished'
 })

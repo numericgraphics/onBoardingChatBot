@@ -1,36 +1,36 @@
 {
   "chatBot": {
-    "partOne": [
+    "stateOne": [
       {
-        "text": "partOne 1"
+        "text": "Hello"
       },
       {
-        "text": "partOne 2"
+        "text": "Welcome to my chat bot !"
       }
     ],
-    "partTwo": [
+    "stateTwo": [
       {
-        "text": "partTwo 1"
+        "text": "thank's"
       },
       {
-        "text": "partTwo 2"
+        "text": "i love it"
       },
       {
-        "text": "partTwo 3"
+        "text": "it's cool"
       }
     ],
-    "partThree": [
+    "stateThree": [
       {
-        "text": "partThree 1"
+        "text": "it is not that hard"
       },
       {
-        "text": "partThree 2"
+        "text": "to use react and expo"
       },
       {
-        "text": "partThree 3"
+        "text": "to build"
       },
       {
-        "text": "partThree 4"
+        "text": "a funny talks"
       }
     ]
   }
